@@ -89,7 +89,7 @@ def vertex_model_uploader(
     
     blessing = artifact_utils.get_single_instance([model_blessing])
     if not model_utils.is_model_blessed(blessing):
-        logging.info(f"Model is not uploaded to Vertex AI because it was not blessed by the evaluator.")
+        logging.info("Model is not uploaded to Vertex AI because it was not blessed by the evaluator.")
         uploaded_model.set_int_custom_property("uploaded", 0)
         return
 
