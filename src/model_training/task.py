@@ -129,7 +129,7 @@ def main():
     )
 
     # Log metrics in Vertex Experiments.
-    logging.info(f'Logging metrics to Vertex Experiments...')
+    logging.info('Logging metrics to Vertex Experiments...')
     if args.experiment_name:
         vertex_ai.log_metrics({"val_loss": val_loss, "val_accuracy": val_accuracy})
 
@@ -151,6 +151,6 @@ if __name__ == "__main__":
     logging.info(f"TensorFlow Version = {tf.__version__}")
     logging.info(f'TF_CONFIG = {os.environ.get("TF_CONFIG", "Not found")}')
     logging.info(f"DEVICES = {device_lib.list_local_devices()}")
-    logging.info(f"Task started...")
+    logging.info("Task started...")
     main()
-    logging.info(f"Task completed.")
+    logging.info("Task completed.")
